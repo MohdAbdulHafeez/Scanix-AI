@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* THIS BLOCK FIXES ALL THE MISSING COLORS IN TAILWIND V4 */
+@layer base {
+  :root {
+    --color-scanix-ivory: #FDFCF8;
+    --color-scanix-emerald: #0A8F6A;
+    --color-scanix-mint: #10B981;
+    --color-scanix-forest: #047857;
+    --color-scanix-slate: #0F172A;
+    --color-scanix-ash: #64748B;
+    --color-scanix-border: #E2E8F0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 48 40% 98%; 
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 163 87% 30%;
+    --primary-foreground: 48 40% 98%;
+    --secondary: 215 16% 47%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 163 87% 30%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.05);
+  }
+}
